@@ -1,0 +1,162 @@
+/* --- Variables & Reset --- */
+:root {
+    --bg-color: #1a1a2e;       /* Dark Blue Background */
+    --card-bg: #16213e;        /* Lighter Blue for Cards */
+    --accent-color: #e94560;   /* Neon Red/Pink Accent */
+    --text-color: #ecf0f1;     /* White/Grey Text */
+    --nav-bg: rgba(22, 33, 62, 0.95);
+}
+
+body {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 80px;
+}
+
+/* --- Navbar Styling --- */
+.navbar {
+    background-color: var(--nav-bg) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--accent-color);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5) !important;
+}
+
+.navbar .navbar-brand {
+    font-family: 'Press Start 2P', cursive; /* Gaming Font */
+    color: var(--accent-color) !important;
+    text-shadow: 2px 2px #000;
+    font-size: 1.1rem;
+}
+
+.navbar .nav-link {
+    color: rgba(255, 255, 255, 0.8) !important;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: var(--accent-color) !important;
+}
+
+/* --- Main Layout & Cards --- */
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+}
+
+.card-header {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Game Area Container */
+.card-game {
+    background: #0f3460; /* Slightly different tone for game area */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 50px rgba(0,0,0,0.5);
+    margin-bottom: 20px;
+}
+
+/* The Game Canvas */
+canvas {
+    border: 4px solid var(--text-color);
+    box-shadow: 0 0 20px rgba(233, 69, 96, 0.2); /* Subtle Glow */
+    border-radius: 4px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* --- Info Tab & Stats --- */
+#info-tab p {
+    background: rgba(0, 0, 0, 0.25);
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#score, #arrow, #gold {
+    font-family: 'Press Start 2P', cursive;
+    color: var(--accent-color);
+    font-size: 0.9rem;
+}
+
+/* Images/Icons fix */
+#info-tab img {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+/* --- Buttons --- */
+.btn-primary, .btn-success {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    transition: transform 0.2s;
+}
+
+.btn-primary:hover, .btn-success:hover {
+    background-color: #d6344d; /* Darker red on hover */
+    border-color: #d6344d;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: #4a4e69;
+    border: none;
+}
+
+/* --- Tabs --- */
+.nav-tabs {
+    border-bottom: none;
+}
+.nav-tabs .nav-link {
+    color: #8d99ae;
+    border: none;
+}
+.nav-tabs .nav-link.active {
+    background-color: var(--accent-color);
+    color: white;
+    border-radius: 5px 5px 0 0;
+}
+
+/* --- Modals --- */
+.modal-content {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--accent-color);
+    box-shadow: 0 0 30px rgba(0,0,0,0.7);
+}
+
+.modal-header, .modal-footer {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-close-white {
+    filter: invert(1);
+}
+
+/* --- Inputs & Forms --- */
+.form-control, .form-select {
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+}
+.form-control:focus {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 0.25rem rgba(233, 69, 96, 0.25);
+}
